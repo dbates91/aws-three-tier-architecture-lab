@@ -8,7 +8,11 @@ This project documents my hands-on deployment of a three-tier web architecture o
 
 The goal of this lab is to gain practical experience with AWS networking, EC2, subnet segmentation, routing, security groups, Linux administration, and application connectivity.
 
-## Architecture
+## VPC Network Architecture
+
+I created a custom AWS VPC using the `10.0.0.0/16` CIDR range with one public subnet and two private subnets. Separate route tables control traffic between the tiers, while an Internet Gateway provides public connectivity and a NAT Gateway allows resources in the private subnets to initiate outbound connections.
+
+![AWS VPC Resource Map](screenshots/02-vpc-resource-map.png)
 
 Presentation Tier → Application Tier → Database Tier
 
